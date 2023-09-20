@@ -1,6 +1,6 @@
 import Ingredient from "./Ingredient.mjs";
 
-class Ingredients{
+export default class Ingredients{
 
     constructor(ingredients){
         
