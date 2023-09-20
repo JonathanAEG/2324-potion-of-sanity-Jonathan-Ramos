@@ -2,10 +2,11 @@ const positive_effect_tokens =[`Fortify`, `Resist`, `Cure`, `Restore`, `Regenera
 
 class Effect{
 
-    // constructor(name, type){
+    constructor(name, type){
 
-
-    // }
+        this.name = name;
+        this.type = type;
+    }
 
     static from(name){
 
