@@ -13,9 +13,16 @@ const execute = async()=>{
 
         //Creación de cauldron
         const cauldron = new Cauldron(ingredients.ingredients);
+
+        //Crear Pociones
         
+
+        const potion1 = cauldron.createPotion("Bear Claws", "Bee");
+        showPotion(potion1);
+
+
     }catch(error){
-        console.log(error.message);
+        console.log(error);
     }
 }
 
@@ -42,4 +49,19 @@ function showIngredients(ingredients){
         }
         console.log(`-------------------------------`)
     })
+}
+
+
+function showPotion(potion){
+
+    for(let atribute in potion){
+
+        if(atribute != `name`){
+
+            console.log(`${atribute}:    ${potion[atribute]}`)
+        }else{
+            console.log(`${potion[atribute]}`)
+        }
+    }
+    console.log(`-------------------------------`)
 }

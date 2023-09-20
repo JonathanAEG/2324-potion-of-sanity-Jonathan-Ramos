@@ -1,4 +1,5 @@
 import Potion from "./Potion.mjs";
+import Ingredients from "./Ingredients.mjs";
 
 export default class Cauldron{
 
@@ -7,17 +8,17 @@ export default class Cauldron{
         this.ingredients = ingredients;
     }
 
-    createPotion(ingredientName1, ingredientName2){
+    createPotion(name1, name2){
 
-        const ingredient1 = this.ingredients.find(ingredientName1);
-        const ingredient2 = this.ingredients.find(ingredientName2);
+        const ingredient1 = this.ingredients.find(name1);
+        const ingredient2 = this.ingredients.find(name2);
 
         const commonEffects = ingredient1.findCommonEffects(ingredient2);
         
         if(commonEffects.length === 0){
 
             return Potion.failed();
-            
+
         }else if(isPotionOfSanity(ingredient1, ingredient2)){
 
             return Potion.sanity();
