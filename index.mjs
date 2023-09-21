@@ -12,14 +12,24 @@ const execute = async()=>{
         showIngredients(ingredients.ingredients);
 
         //Creación de cauldron
-        const cauldron = new Cauldron(ingredients.ingredients);
+        const cauldron = new Cauldron(ingredients);
 
         //Crear Pociones
         
+        console.log(`Potions`)
+        console.log(`-------------------------------`)
 
         const potion1 = cauldron.createPotion("Bear Claws", "Bee");
         showPotion(potion1);
 
+        const potion2 = cauldron.createPotion("Chicken's Egg", "Chaurus Eggs")
+        showPotion(potion2);
+
+        const potion3 = cauldron.createPotion("Chaurus Eggs", "Bleeding Crown")
+        showPotion(potion3);
+
+        const potion4 = cauldron.createPotion("Nightshade", "Ectoplasm")
+        showPotion(potion4);
 
     }catch(error){
         console.log(error);

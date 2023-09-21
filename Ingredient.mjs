@@ -24,7 +24,7 @@ export default class Ingredient{
         return this.name === name;
     }
 
-    findCommoEffects(otherIngredient){
+    findCommonEffects(otherIngredient){
         return this.effects.filter(effect=> otherIngredient.hasEffect(effect));
     }
 
